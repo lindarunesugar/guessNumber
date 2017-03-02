@@ -22,13 +22,20 @@ class HELLViewController: UIViewController
     @IBOutlet weak var background_ai: UIImageView!
     @IBOutlet weak var no: UIImageView!
     @IBOutlet weak var yes: UIImageView!
+    @IBOutlet weak var wrong: UILabel!
+    @IBOutlet weak var right: UILabel!
     
+    var number = 0
+    var chance_count = 6
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         yes.isHidden = true
         no.isHidden = true
+        wrong.isHidden = true
+        right.isHidden = true
         // Do any additional setup after loading the view.
     }
 
