@@ -10,32 +10,75 @@ import UIKit
 
 class HELLViewController: UIViewController
 {
-
-    @IBOutlet weak var text: UITextField!
     
-    @IBAction func send(_ sender: Any)
+    @IBOutlet weak var number: UITextField!   //輸入的數字
+    @IBOutlet weak var hint: UILabel!    //提示訊息
+    @IBOutlet weak var guessTime: UILabel!   //剩餘猜測次數
+    
+    var random_number = Int(arc4random_uniform(100))   //隨機產生的數字
+    var chance_count = 6    //初始猜測次數
+    
+    
+    @IBAction func send(_ sender: Any)    //按鈕的功能
+    {
+        let controller_wrong =
+            self.storyboard?.instantiateViewController(withIdentifier:
+                "Wrong")
+        let controller_right =
+            self.storyboard?.instantiateViewController(withIdentifier:
+                "Right")
+        
+        //按下計算按鈕時收起鍵盤
+        number.resignFirstResponder()
+        
+        while chance_count > 0  //還可以猜
+        {
+            if number.text! == ""    //沒有輸入值
+            {
+                hint.text! = "不猜也無妨..."
+                chance_count -= 1
+            }
+            else  //輸入數字
+            {
+                var input = Int(number.text!)
+                
+            }
+
+        }
+        if chance_count == 0  //沒有機會了
+        {
+            self.present(controller_wrong!, animated: true, completion:
+                nil)
+        }
+        
+    }
+    
+    
+    @IBAction func play_again_right(_ sender: Any)
     {
         
     }
     
-    @IBOutlet weak var chance: UILabel!
-    @IBOutlet weak var background_ai: UIImageView!
-    @IBOutlet weak var no: UIImageView!
-    @IBOutlet weak var yes: UIImageView!
-    @IBOutlet weak var wrong: UILabel!
-    @IBOutlet weak var right: UILabel!
+    @IBAction func play_again_wrong(_ sender: Any)
+    {
+        
+    }
     
-    var number = 0
-    var chance_count = 6
+    //按下計算按鈕時收起鍵盤
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        number.resignFirstResponder()
+        return true
+    }
+    
+    
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        yes.isHidden = true
-        no.isHidden = true
-        wrong.isHidden = true
-        right.isHidden = true
+        
         // Do any additional setup after loading the view.
     }
 
