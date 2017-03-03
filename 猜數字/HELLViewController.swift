@@ -18,12 +18,12 @@ class HELLViewController: UIViewController
     var random_number = 4
     //var random_number = Int(arc4random_uniform(100))   //隨機產生的數字
     var chance_count = 6    //初始猜測次數
-    
+    var upper = 100
+    var lower = 0
     
     @IBAction func send(_ sender: Any)    //按鈕的功能
     {
-        var upper = 100
-        var lower = 0
+        
         
         let controller_wrong =
             self.storyboard?.instantiateViewController(withIdentifier:
@@ -109,48 +109,39 @@ class HELLViewController: UIViewController
             self.present(controller_wrong!, animated: true, completion:
                 nil)
         }
-        
-        /*while chance_count > 0  //還可以猜
-        {
-            if number.text! == ""    //沒有輸入值
-            {
-                hint.text! = "不猜也無妨..."
-                chance_count -= 1
-                guessTime.text! = "還有\(chance_count)次機會"
-            }
-            else  //輸入數字
-            {
-                let input = Int(number.text!)  //先把輸入的數字存下來
-                
-                if input == random_number  //猜對
-                {
-                    //利用寫程式的方法把controller叫出來
-                    self.present(controller_right!, animated: true, completion:
-                        nil)
-                    break
-                }
-            }
-
-        }
-        if chance_count == 0  //沒有機會了
-        {
-            //利用寫程式的方法把controller叫出來
-            self.present(controller_wrong!, animated: true, completion:
-                nil)
-        }
-        */
-        
     }
     
     
     @IBAction func play_again_right(_ sender: Any)
     {
-        
+        let controller_start =
+            self.storyboard?.instantiateViewController(withIdentifier:
+                "Start")
+        self.present(controller_start!, animated: true, completion:
+            nil)
+        hint.text! = ""
+        guessTime.text! = "共有6次機會"
+        chance_count = 6
+        upper = 100
+        lower = 0
+        //random_number = Int(arc4random_uniform(100))
+        random_number = 4
     }
     
     @IBAction func play_again_wrong(_ sender: Any)
     {
-        
+        let controller_start =
+            self.storyboard?.instantiateViewController(withIdentifier:
+                "Start")
+        self.present(controller_start!, animated: true, completion:
+            nil)
+        hint.text! = ""
+        guessTime.text! = "共有6次機會"
+        chance_count = 6
+        upper = 100
+        lower = 0
+        //random_number = Int(arc4random_uniform(100))
+        random_number = 4
     }
     
     //按下送信時收起鍵盤
