@@ -50,7 +50,7 @@ class HELLViewController: UIViewController
         {
             if number.text! == ""    //沒有輸入值
             {
-                hint.text! = "不猜也無妨..."
+                hint.text = "不猜也無妨..."
                 chance_count -= 1
                 print_guessTime(chance_count: chance_count)
                 check_if_chance_zero(chance_count: chance_count)
@@ -67,7 +67,7 @@ class HELLViewController: UIViewController
                 }
                 else if input! > 100
                 {
-                    hint.text! = "你應該要再看清楚遊戲規則..."
+                    hint.text = "你應該要再看清楚遊戲規則..."
                     chance_count -= 1
                     print_guessTime(chance_count: chance_count)
                     check_if_chance_zero(chance_count: chance_count)
@@ -76,7 +76,7 @@ class HELLViewController: UIViewController
                 else if input! < random_number
                 {
                     lower = input!+1
-                    hint.text! = "你應該在\(lower)~\(upper)內猜一個數字"
+                    hint.text = "你應該在\(lower)~\(upper)內猜一個數字"
                     chance_count -= 1
                     print_guessTime(chance_count: chance_count)
                     check_if_chance_zero(chance_count: chance_count)
@@ -85,7 +85,7 @@ class HELLViewController: UIViewController
                 else if input! > random_number
                 {
                     upper = input!-1
-                    hint.text! = "你應該在\(lower)~\(upper)內猜一個數字"
+                    hint.text = "你應該在\(lower)~\(upper)內猜一個數字"
                     chance_count -= 1
                     print_guessTime(chance_count: chance_count)
                     check_if_chance_zero(chance_count: chance_count)
@@ -105,36 +105,19 @@ class HELLViewController: UIViewController
     //印出還有幾次機會
     func print_guessTime(chance_count:Int)
     {
-        guessTime.text! = "還有\(chance_count)次機會"
+        guessTime.text = "還有\(chance_count)次機會"
     }
     
     //再玩一次按鈕
-    @IBAction func play_again_right(_ sender: Any)
+    @IBAction func play_again(_ sender: Any)
     {
         let controller_start =
             self.storyboard?.instantiateViewController(withIdentifier:
                 "Start")
         self.present(controller_start!, animated: true, completion:
             nil)
-        hint.text! = ""
-        guessTime.text! = "共有6次機會"
-        chance_count = 6
-        upper = 100
-        lower = 0
-        //random_number = Int(arc4random_uniform(100))
-        random_number = 4
-    }
-    
-    //再玩一次按鈕
-    @IBAction func play_again_wrong(_ sender: Any)
-    {
-        let controller_start =
-            self.storyboard?.instantiateViewController(withIdentifier:
-                "Start")
-        self.present(controller_start!, animated: true, completion:
-            nil)
-        hint.text! = ""
-        guessTime.text! = "共有6次機會"
+        hint.text = ""
+        guessTime.text = "共有6次機會"
         chance_count = 6
         upper = 100
         lower = 0
