@@ -12,7 +12,7 @@
         <!--地獄通信-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Start" id="BYZ-38-t0r" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,7 +80,7 @@
         <!--由於你沒有猜對...因此...-->
         <scene sceneID="4TQ-9r-biS">
             <objects>
-                <viewController storyboardIdentifier="Wrong" id="iSz-88-M1r" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iSz-88-M1r" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pSp-Qp-vxw"/>
                         <viewControllerLayoutGuide type="bottom" id="hv2-BU-GMd"/>
@@ -113,7 +113,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="ADQ-Hj-gHM"/>
+                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="ADQ-Hj-gHM">
+                        <barButtonItem key="backBarButtonItem" title="    " id="IBz-sH-FRG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-ok-ooo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +124,7 @@
         <!--因為你猜對了...所以...-->
         <scene sceneID="PKS-La-TqT">
             <objects>
-                <viewController storyboardIdentifier="Right" id="kBa-0j-yma" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kBa-0j-yma" customClass="HELLViewController" customModule="猜數字" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Use-KP-oMq"/>
                         <viewControllerLayoutGuide type="bottom" id="IEi-5F-h0G"/>
@@ -155,7 +157,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="gWD-wH-3gd"/>
+                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="gWD-wH-3gd">
+                        <barButtonItem key="backBarButtonItem" title="    " id="UI2-B5-pbX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-Hg-8IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +168,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LNh-it-uLm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEB-N6-0e3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Start" automaticallyAdjustsScrollViewInsets="NO" id="UEB-N6-0e3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rvd-Xv-e3o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -182,7 +186,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gOg-2T-g6B">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NS2-0T-jxQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Right" automaticallyAdjustsScrollViewInsets="NO" id="NS2-0T-jxQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8WM-ti-69J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -200,7 +204,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Jy4-Wq-6wg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Vx-A5-TRf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Wrong" automaticallyAdjustsScrollViewInsets="NO" id="9Vx-A5-TRf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lhr-aR-LdF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -222,6 +226,6 @@
         <image name="back" width="273" height="303"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d2w-Hb-hbD"/>
+        <segue reference="oeQ-Xw-DTO"/>
     </inferredMetricsTieBreakers>
 </document>
