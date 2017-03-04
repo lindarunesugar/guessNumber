@@ -40,7 +40,7 @@ class HELLViewController: UIViewController
         {
             if chance_count == 0
             {
-                //利用寫程式的方法把controller叫出來
+                //利用寫程式的方法把下地獄的controller叫出來
                 self.present(controller_wrong!, animated: true, completion:
                     nil)
             }

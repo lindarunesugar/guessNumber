@@ -113,12 +113,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="VdS-pN-xsS"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="ADQ-Hj-gHM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-ok-ooo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646" y="466"/>
+            <point key="canvasLocation" x="3584.8000000000002" y="465.51724137931041"/>
         </scene>
         <!--因為你猜對了...所以...-->
         <scene sceneID="PKS-La-TqT">
@@ -156,12 +155,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="gxR-MH-Nxs"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="gWD-wH-3gd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-Hg-8IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646" y="-390"/>
+            <point key="canvasLocation" x="3584.8000000000002" y="-390.85457271364322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LNh-it-uLm">
@@ -181,6 +179,42 @@
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="138.98050974512745"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gOg-2T-g6B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NS2-0T-jxQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8WM-ti-69J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kBa-0j-yma" kind="relationship" relationship="rootViewController" id="yyM-F7-dmt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmE-Ad-EUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645.5999999999999" y="-390.85457271364322"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jy4-Wq-6wg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Vx-A5-TRf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lhr-aR-LdF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iSz-88-M1r" kind="relationship" relationship="rootViewController" id="Ml9-eq-RkK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEL-EU-AhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645.5999999999999" y="465.51724137931041"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NO" width="750" height="1344"/>
@@ -188,6 +222,6 @@
         <image name="back" width="273" height="303"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oeQ-Xw-DTO"/>
+        <segue reference="d2w-Hb-hbD"/>
     </inferredMetricsTieBreakers>
 </document>
