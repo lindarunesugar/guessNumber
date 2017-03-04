@@ -15,7 +15,6 @@ class HELLViewController: UIViewController
     @IBOutlet weak var hint: UILabel!    //提示訊息
     @IBOutlet weak var guessTime: UILabel!   //剩餘猜測次數    還有6次機會
     
-    //var random_number = 4
     var random_number = Int(arc4random_uniform(100))   //隨機產生的數字1~100
     var chance_count = 6    //初始猜測次數
     var upper = 100     //猜測上限
@@ -62,7 +61,7 @@ class HELLViewController: UIViewController
                 
                 if input == random_number  //猜對
                 {
-                    //利用寫程式的方法把controller叫出來
+                    //利用寫程式的方法把拿出稻草人的controller叫出來
                     self.present(controller_right!, animated: true, completion:
                         nil)
                 }
