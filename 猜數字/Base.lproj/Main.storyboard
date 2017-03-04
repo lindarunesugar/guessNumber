@@ -113,12 +113,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="AL4-3y-RNs"/>
+                    <navigationItem key="navigationItem" title="由於你沒有猜對...因此..." id="VdS-pN-xsS"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-ok-ooo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="5343.1999999999998" y="138.98050974512745"/>
         </scene>
         <!--因為你猜對了...所以...-->
         <scene sceneID="PKS-La-TqT">
@@ -156,12 +156,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="2vf-uI-YOe"/>
+                    <navigationItem key="navigationItem" title="因為你猜對了...所以..." id="gxR-MH-Nxs"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-Hg-8IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3620" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LNh-it-uLm">

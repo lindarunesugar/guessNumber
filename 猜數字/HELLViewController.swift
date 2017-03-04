@@ -18,16 +18,16 @@ class HELLViewController: UIViewController
     var random_number = 4
     //var random_number = Int(arc4random_uniform(100))   //隨機產生的數字
     var chance_count = 6    //初始猜測次數
-    var upper = 100
-    var lower = 0
+    var upper = 100     //猜測上限
+    var lower = 0        //猜測下限
     
-    @IBAction func send(_ sender: Any)    //按鈕的功能
+    @IBAction func send(_ sender: Any)    //送信的功能
     {
-        
-        
+        //錯誤--下地獄
         let controller_wrong =
             self.storyboard?.instantiateViewController(withIdentifier:
                 "Wrong")
+        //正確--稻草人
         let controller_right =
             self.storyboard?.instantiateViewController(withIdentifier:
                 "Right")
@@ -35,19 +35,25 @@ class HELLViewController: UIViewController
         //按下送信時收起鍵盤
         number.resignFirstResponder()
         
+        //確認機會是否為0
+        func check_if_chance_zero(chance_count:Int)
+        {
+            if chance_count == 0
+            {
+                //利用寫程式的方法把controller叫出來
+                self.present(controller_wrong!, animated: true, completion:
+                    nil)
+            }
+        }
+        
         if chance_count > 0
         {
             if number.text! == ""    //沒有輸入值
             {
                 hint.text! = "不猜也無妨..."
                 chance_count -= 1
-                guessTime.text! = "還有\(chance_count)次機會"
-                if chance_count == 0
-                {
-                    //利用寫程式的方法把controller叫出來
-                    self.present(controller_wrong!, animated: true, completion:
-                        nil)
-                }
+                print_guessTime(chance_count: chance_count)
+                check_if_chance_zero(chance_count: chance_count)
             }
             else  //有輸入數字
             {
@@ -63,13 +69,8 @@ class HELLViewController: UIViewController
                 {
                     hint.text! = "你應該要再看清楚遊戲規則..."
                     chance_count -= 1
-                    guessTime.text! = "還有\(chance_count)次機會"
-                    if chance_count == 0
-                    {
-                        //利用寫程式的方法把controller叫出來
-                        self.present(controller_wrong!, animated: true, completion:
-                            nil)
-                    }
+                    print_guessTime(chance_count: chance_count)
+                    check_if_chance_zero(chance_count: chance_count)
                     
                 }
                 else if input! < random_number
@@ -77,13 +78,8 @@ class HELLViewController: UIViewController
                     lower = input!+1
                     hint.text! = "你應該在\(lower)~\(upper)內猜一個數字"
                     chance_count -= 1
-                    guessTime.text! = "還有\(chance_count)次機會"
-                    if chance_count == 0
-                    {
-                        //利用寫程式的方法把controller叫出來
-                        self.present(controller_wrong!, animated: true, completion:
-                            nil)
-                    }
+                    print_guessTime(chance_count: chance_count)
+                    check_if_chance_zero(chance_count: chance_count)
 
                 }
                 else if input! > random_number
@@ -91,17 +87,11 @@ class HELLViewController: UIViewController
                     upper = input!-1
                     hint.text! = "你應該在\(lower)~\(upper)內猜一個數字"
                     chance_count -= 1
-                    guessTime.text! = "還有\(chance_count)次機會"
-                    if chance_count == 0
-                    {
-                        //利用寫程式的方法把controller叫出來
-                        self.present(controller_wrong!, animated: true, completion:
-                            nil)
-                    }
+                    print_guessTime(chance_count: chance_count)
+                    check_if_chance_zero(chance_count: chance_count)
                     
                 }
             }
-
         }
         else
         {
@@ -109,9 +99,16 @@ class HELLViewController: UIViewController
             self.present(controller_wrong!, animated: true, completion:
                 nil)
         }
+        
     }
     
+    //印出還有幾次機會
+    func print_guessTime(chance_count:Int)
+    {
+        guessTime.text! = "還有\(chance_count)次機會"
+    }
     
+    //再玩一次按鈕
     @IBAction func play_again_right(_ sender: Any)
     {
         let controller_start =
@@ -128,6 +125,7 @@ class HELLViewController: UIViewController
         random_number = 4
     }
     
+    //再玩一次按鈕
     @IBAction func play_again_wrong(_ sender: Any)
     {
         let controller_start =
