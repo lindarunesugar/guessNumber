@@ -109,6 +109,7 @@ class HELLViewController: UIViewController
     }
     
     //再玩一次按鈕
+    
     @IBAction func play_again(_ sender: Any)
     {
         let controller_start =

@@ -100,14 +100,14 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-ye-ifp">
-                                <rect key="frame" x="126" y="603" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MF-KY-2nk">
+                                <rect key="frame" x="126" y="602" width="123" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再次進行地獄通信">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="play_again_right:" destination="kBa-0j-yma" eventType="touchUpInside" id="8uA-lO-Q67"/>
+                                    <action selector="play_again:" destination="kBa-0j-yma" eventType="touchUpInside" id="1Oa-eX-VUC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-ok-ooo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3342" y="139"/>
+            <point key="canvasLocation" x="3341.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--因為你猜對了...所以...-->
         <scene sceneID="PKS-La-TqT">
@@ -150,7 +150,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="play_again_right:" destination="kBa-0j-yma" eventType="touchUpInside" id="VdT-JN-02s"/>
+                                    <action selector="play_again:" destination="kBa-0j-yma" eventType="touchUpInside" id="qjF-dQ-7tK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-Hg-8IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="139"/>
+            <point key="canvasLocation" x="2624.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LNh-it-uLm">
