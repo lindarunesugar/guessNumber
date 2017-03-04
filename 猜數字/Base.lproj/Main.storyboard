@@ -107,7 +107,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="play_again:" destination="kBa-0j-yma" eventType="touchUpInside" id="1Oa-eX-VUC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oeQ-Xw-DTO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-ok-ooo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3341.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2646" y="466"/>
         </scene>
         <!--因為你猜對了...所以...-->
         <scene sceneID="PKS-La-TqT">
@@ -150,7 +150,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="play_again:" destination="kBa-0j-yma" eventType="touchUpInside" id="qjF-dQ-7tK"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="d2w-Hb-hbD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-Hg-8IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2624.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2646" y="-390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LNh-it-uLm">
@@ -187,4 +187,7 @@
         <image name="YES" width="750" height="1344"/>
         <image name="back" width="273" height="303"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oeQ-Xw-DTO"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -108,33 +108,12 @@ class HELLViewController: UIViewController
         guessTime.text = "還有\(chance_count)次機會"
     }
     
-    //再玩一次按鈕
-    
-    @IBAction func play_again(_ sender: Any)
-    {
-        let controller_start =
-            self.storyboard?.instantiateViewController(withIdentifier:
-                "Start")
-        self.present(controller_start!, animated: true, completion:
-            nil)
-        hint.text = ""
-        guessTime.text = "共有6次機會"
-        chance_count = 6
-        upper = 100
-        lower = 0
-        //random_number = Int(arc4random_uniform(100))
-        random_number = 4
-    }
-    
     //按下送信時收起鍵盤
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         number.resignFirstResponder()
         return true
     }
-    
-    
-    
     
     override func viewDidLoad()
     {
